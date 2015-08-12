@@ -36,8 +36,8 @@ namespace moo
 
 		if (needToGrow())
 		{
-//			int Z = mas_size*1.49999999999999 + 1;
-//			double K = mas_size*1.49999999999999 + 1;
+			int Z = mas_size*1.49999999999999 + 1;
+			double K = mas_size*1.49999999999999 + 1;
 			mas_size = (mas_size + 1)*1.49999999999999;
 			int * new_mas = new int[mas_size]; //выдел€етс€ пам€ть дл€ массива,
 												 //равна€ размеру массива+1
