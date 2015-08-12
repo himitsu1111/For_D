@@ -7,7 +7,7 @@ namespace moo
 
 
 
-	class Vector
+	class vector
 	{
 			int * mas;
 			int mas_size;
@@ -15,23 +15,23 @@ namespace moo
 
 		public:
 
-			Vector(); //конструктор по умолчанию
+			vector(); //конструктор по умолчанию
 						 /* Аргумент я сюда засунул потому,
 						 что конструктор я вызываю из пушбека.
 						 И чтобы там все работало, надо аргумент
 						 передавать.			 */
-			void Pushback(int);
+			void push_back(int);
 			int sizeAccessor() { return mas_size;}
 			int elementsAccessor() { return mas_elements;}
 			int needToGrow() { return (mas_elements>=mas_size) ? 1 : 0; }
-			~Vector() { delete[] mas; }
+			~vector() { delete[] mas; }
 			int& operator[](int ind_mas) { return mas[ind_mas]; }
 	};
 
-	Vector::Vector() : mas(0), mas_size(0), mas_elements(0) {} //конструктор по умолчанию
+	vector::vector() : mas(0), mas_size(0), mas_elements(0) {} //конструктор по умолчанию
                        //список инициализации
 
-	void Vector::Pushback(int elem)
+	void vector::push_back(int elem)
 	{
 
 		if (needToGrow())
@@ -60,7 +60,7 @@ void show_vector( std::vector<int>&a)
 				std::cout << *it << '\n';
 }
 
-void show_my_vector(moo::Vector & b)
+void show_my_vector(moo::vector & b)
 {
 	for (int i = 0; i < b.elementsAccessor(); i++)
 		std::cout << "moi vectorok-massivok " << b[i] << '\n' ;
@@ -73,19 +73,19 @@ int main()
 {
 	using namespace moo;
 
-	Vector K;
-	K.Pushback(666);
-	K.Pushback(222);
-	K.Pushback(111);
-	K.Pushback(333);
-	K.Pushback(555);
-	K.Pushback(999);
-    K.Pushback(666);
-	K.Pushback(222);
-	K.Pushback(111);
-	K.Pushback(333);
-	K.Pushback(555);
-	K.Pushback(999);
+	vector K;
+	K.push_back(666);
+	K.push_back(222);
+	K.push_back(111);
+	K.push_back(333);
+	K.push_back(555);
+	K.push_back(999);
+	K.push_back(666);
+	K.push_back(222);
+	K.push_back(111);
+	K.push_back(333);
+	K.push_back(555);
+	K.push_back(999);
 
 	std::vector<int> V;
 
