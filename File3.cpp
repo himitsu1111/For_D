@@ -16,10 +16,7 @@ namespace moo
 		public:
 
 			vector(); //конструктор по умолчанию
-						 /* Аргумент я сюда засунул потому,
-						 что конструктор я вызываю из пушбека.
-						 И чтобы там все работало, надо аргумент
-						 передавать.			 */
+						 
 			void push_back(int);
 			int sizeAccessor() { return mas_size;}
 			int elementsAccessor() { return mas_elements;}
