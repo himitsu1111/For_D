@@ -28,10 +28,6 @@ namespace moo
 
 	Vector::Vector() : mas(0), mas_size(0) {} //конструктор по умолчанию
                        //список инициализации
-	void Vector::IndexMutator(int ind)
-	{
-		mas_size = ind;
-	}
 
 	void Vector::Pushback(int elem)
 	{
